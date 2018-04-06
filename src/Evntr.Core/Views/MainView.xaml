@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Evntr.Core.Views;assembly=Evntr.Core"
+    x:Class="Evntr.Core.Views.MainView">
+    <views:GeneralView  BindingContext="{Binding GeneralViewModel}" Icon="ic_general_black.png" />
+    <views:ScheduleView  BindingContext="{Binding ScheduleViewModel}" Icon="ic_schedule_black.png" />
+    <views:AboutView  BindingContext="{Binding AboutViewModel}" Icon="ic_about_black.png" />
+</TabbedPage>
