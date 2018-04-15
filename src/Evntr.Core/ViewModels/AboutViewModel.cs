@@ -9,7 +9,7 @@ namespace Evntr.Core.ViewModels
 {
 	public class AboutViewModel : ViewModelBase, IHandleViewAppearing, IHandleViewDisappearing
 	{
-		public AboutViewModel(string title) : base("Sobre")
+		public AboutViewModel() : base("Sobre")
 		{
 		}
 

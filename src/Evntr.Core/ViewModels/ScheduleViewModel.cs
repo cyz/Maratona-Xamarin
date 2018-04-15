@@ -9,7 +9,7 @@ namespace Evntr.Core.ViewModels
 {
 	public class ScheduleViewModel : ViewModelBase, IHandleViewAppearing, IHandleViewDisappearing
 	{
-		public ScheduleViewModel(string title) : base("Agenda")
+		public ScheduleViewModel() : base("Agenda")
 		{
 		}
 

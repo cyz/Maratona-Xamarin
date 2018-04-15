@@ -9,7 +9,7 @@ namespace Evntr.Core.ViewModels
 {
 	public class GeneralViewModel : ViewModelBase, IHandleViewAppearing, IHandleViewDisappearing
 	{
-		public GeneralViewModel(string title) : base("Geral")
+		public GeneralViewModel() : base("Geral")
 		{
 		}
 

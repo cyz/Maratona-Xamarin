@@ -33,7 +33,8 @@ namespace Evntr.Core.ViewModels
 		}
 
 		public T Resolve<T>() => _container.Resolve<T>();
-		public object Resolve(Type type) => _container.Resolve(type);
+        public object Resolve(Type type) => _container.Resolve(type);
+
 		public void Register<TInterface, TImplementation>() where TImplementation : TInterface => _containerBuilder.RegisterType<TImplementation>().As<TInterface>();
 		public void Register<T>() where T : class => _containerBuilder.RegisterType<T>();
 
