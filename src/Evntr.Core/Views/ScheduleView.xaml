@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Evntr.Core.Controls;assembly=Evntr.Core"
     x:Class="Evntr.Core.Views.ScheduleView">
     <StackLayout BackgroundColor="#352584"
                  Spacing="0"
@@ -27,7 +28,7 @@
                                    FontAttributes="Bold"/>
                             <Label Text="{Binding Speaker.Name}"
                                    FontSize="14"/>
-                            <Label Text="{Binding Description}"
+                            <local:TalkDescriptionLabel Text="{Binding Description}"
                                    FontSize="14"/>
                         </StackLayout>
                     </ViewCell>
