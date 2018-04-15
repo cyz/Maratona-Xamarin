@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Evntr.Core.Views.TalkDetailsView"
+             Title="Speaker">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal"
+                 Padding="10"
+                 BackgroundColor="#352584">
+            <Image Source="{Binding Talk.Speaker.AvatarUrl}"
+                   HeightRequest="100"
+                   Aspect="AspectFit"/>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Label Text="{Binding Talk.Speaker.Name}"
+                       FontAttributes="Bold"
+                       TextColor="#EFEFEF"/>
+                <Label Text="{Binding Talk.Speaker.MiniBio}"
+                       FontSize="14"
+                       TextColor="#EFEFEF"/>    
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Padding="10">
+            <Label Text="{Binding Talk.Title}"
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Talk.Description}"
+                       FontSize="14"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

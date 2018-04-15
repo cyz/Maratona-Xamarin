@@ -9,7 +9,7 @@ namespace Evntr.Core.ViewModels
 		ScheduleViewModel _scheduleViewModel;
 		GeneralViewModel _generalViewModel;
 
-		public AboutViewModel DiapersViewModel
+        public AboutViewModel AboutViewModel
 		{
 			get { return _aboutViewModel; }
 			set
@@ -19,7 +19,7 @@ namespace Evntr.Core.ViewModels
 			}
 		}
 
-		public ScheduleViewModel OthersViewModel
+        public ScheduleViewModel ScheduleViewModel
 		{
 			get { return _scheduleViewModel; }
 			set
@@ -29,7 +29,7 @@ namespace Evntr.Core.ViewModels
 			}
 		}
 
-		public GeneralViewModel SettingsViewModel
+        public GeneralViewModel GeneralViewModel
 		{
 			get { return _generalViewModel; }
 			set

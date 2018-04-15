@@ -23,12 +23,14 @@ namespace Evntr.Core.ViewModels
 			_containerBuilder = new ContainerBuilder();
 
 			_containerBuilder.RegisterType<NavigationService>().As<INavigationService>();
-			_containerBuilder.RegisterType<DialogService>().As<IDialogService>();
+            _containerBuilder.RegisterType<DialogService>().As<IDialogService>();
+			_containerBuilder.RegisterType<ApiService>().As<IApiService>();
 
 			_containerBuilder.RegisterType<MainViewModel>();
 			_containerBuilder.RegisterType<GeneralViewModel>();
 			_containerBuilder.RegisterType<AboutViewModel>();
-			_containerBuilder.RegisterType<ScheduleViewModel>();
+            _containerBuilder.RegisterType<ScheduleViewModel>();
+			_containerBuilder.RegisterType<TalkDetailsViewModel>();
 
 		}
 

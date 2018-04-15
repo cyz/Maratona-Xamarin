@@ -1,6 +1,8 @@
 ﻿// Event.cs
 // 
 using System;
+using System.Collections.Generic;
+
 namespace Evntr.Models
 {
 	public class Event : BaseModel
@@ -12,5 +14,7 @@ namespace Evntr.Models
 		public string When { get; set; }
 		public string Where { get; set; }
 		public string FullAddress { get; set; }
+
+        public List<Speaker> Speakers { get; set; }
 	}
 }

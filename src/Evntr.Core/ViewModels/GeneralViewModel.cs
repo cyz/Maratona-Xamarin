@@ -1,26 +1,50 @@
 ﻿// GeneralViewModel.cs
 // 
 using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Evntr.Core.Services;
 using Evntr.Core.ViewModels.Base;
+using Evntr.Models;
 using Xamarin.Forms;
 
 namespace Evntr.Core.ViewModels
 {
-	public class GeneralViewModel : ViewModelBase, IHandleViewAppearing, IHandleViewDisappearing
+	public class GeneralViewModel : ViewModelBase, IHandleViewAppearing
 	{
-		public GeneralViewModel() : base("Geral")
+        private readonly IApiService _apiService;
+
+        private Event _event;
+        public Event Event
+        {
+            get { return _event; }
+            set
+            {
+                _event = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<Speaker> _speakers;
+        public ObservableCollection<Speaker> Speakers
+        {
+            get { return _speakers; }
+            set
+            {
+                _speakers = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public GeneralViewModel(IApiService apiService) : base("Geral")
 		{
+            _apiService = apiService;
 		}
 
-		public Task OnViewAppearingAsync(VisualElement view)
+		public async Task OnViewAppearingAsync(VisualElement view)
 		{
-			throw new NotImplementedException();
-		}
-
-		public Task OnViewDisappearingAsync(VisualElement view)
-		{
-			throw new NotImplementedException();
+            Event = await _apiService.GetEvent();
+            Speakers = new ObservableCollection<Speaker>(Event.Speakers);
 		}
 	}
 }

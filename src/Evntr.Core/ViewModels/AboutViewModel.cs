@@ -15,12 +15,12 @@ namespace Evntr.Core.ViewModels
 
 		public Task OnViewAppearingAsync(VisualElement view)
 		{
-			throw new NotImplementedException();
+            return Task.FromResult(true);
 		}
 
 		public Task OnViewDisappearingAsync(VisualElement view)
 		{
-			throw new NotImplementedException();
+            return Task.FromResult(true);
 		}
 	}
 }

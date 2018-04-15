@@ -85,7 +85,7 @@ namespace Evntr.Core.Services
 
 			if (page is MainView)
 			{
-				CurrentApplication.MainPage = page;
+                CurrentApplication.MainPage = new NavigationPage(page);
 			}
 			else
 			{
@@ -136,6 +136,7 @@ namespace Evntr.Core.Services
 			_mappings.Add(typeof(AboutViewModel), typeof(AboutView));
 			_mappings.Add(typeof(ScheduleViewModel), typeof(ScheduleView));
 			_mappings.Add(typeof(GeneralViewModel), typeof(GeneralView));
+            _mappings.Add(typeof(TalkDetailsViewModel), typeof(TalkDetailsView));
 		}
 	}
 }

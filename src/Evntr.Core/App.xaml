@@ -5,6 +5,12 @@
     x:Class="Evntr.Core.App">
     <Application.Resources>
         <ResourceDictionary>
+          <!-- Styles -->
+          <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#352584"/>
+            <Setter Property="BarTextColor" Value="#EFEFEF"/>
+          </Style>
+          <!-- Styles -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

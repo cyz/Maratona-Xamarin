@@ -3,7 +3,54 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Evntr.Core.Views.GeneralView">
-    <ContentPage.Content>
-        <Label Text="General" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-    </ContentPage.Content>
+    <StackLayout BackgroundColor="#352584"
+                 Spacing="0">
+        <Image Source="{Binding Event.LogoUrl}"
+               HeightRequest="120"/>
+        <Label Text="{Binding Event.Name}"
+               BackgroundColor="#352584"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"
+               Margin="0,-20,0,10"/>
+        <Label Text="{Binding Event.Description}"
+               LineBreakMode="WordWrap"
+               BackgroundColor="#352584"
+               TextColor="White"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Start"
+               Margin="10"/>
+        <Label Text="Palestrantes" 
+               BackgroundColor="#ED3941"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="#EFEFEF"
+               HeightRequest="40"/>
+        <ListView
+            ItemsSource="{Binding Speakers}"
+            BackgroundColor="#EFEFEF"
+            SeparatorColor="#CDCDCD"
+            HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10">
+                            <Image Source="{Binding AvatarUrl}"
+                                   HeightRequest="100"
+                                   Aspect="AspectFit"/>
+                            <StackLayout VerticalOptions="EndAndExpand">
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding MiniBio}"
+                                       FontSize="14"/>    
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>            
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
