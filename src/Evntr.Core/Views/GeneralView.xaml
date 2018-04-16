@@ -14,13 +14,6 @@
                VerticalTextAlignment="Center"
                FontAttributes="Bold"
                Margin="0,-20,0,10"/>
-        <Label Text="{Binding Event.Description}"
-               LineBreakMode="WordWrap"
-               BackgroundColor="#352584"
-               TextColor="White"
-               HorizontalTextAlignment="Start"
-               VerticalTextAlignment="Start"
-               Margin="10"/>
         <Label Text="Palestrantes" 
                BackgroundColor="#ED3941"
                VerticalTextAlignment="Center"
