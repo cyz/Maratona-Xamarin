@@ -23,7 +23,7 @@ namespace Evntr.Core.Controls
             {
                 if (Text?.Length > MaxLength)
                 {
-                    Text = $"{Text.Substring(0, 180)}... Leia Mais";
+                    Text = $"{Text.Substring(0, MaxLength - 15)}... Leia Mais";
                 }
             }
 		}
