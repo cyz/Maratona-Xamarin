@@ -14,7 +14,7 @@ namespace Evntr.Core.Controls
             {
                 if (Text?.Length > 200)
                 {
-                    Text = $"{Text.Substring(0, Text.Length - 15)}... Leia Mais";
+                    Text = $"{Text.Substring(0, 180)}... Leia Mais";
                 }
             }
 		}
