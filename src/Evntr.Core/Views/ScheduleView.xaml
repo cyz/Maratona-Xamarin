@@ -29,7 +29,8 @@
                             <Label Text="{Binding Speaker.Name}"
                                    FontSize="14"/>
                             <local:TalkDescriptionLabel Text="{Binding Description}"
-                                   FontSize="14"/>
+                                   FontSize="14"
+                                   MaxLength="100"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>            
