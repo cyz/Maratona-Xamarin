@@ -39,6 +39,13 @@ namespace Evntr.Core.Services
             MiniBio = "Pai de três meninas e um menino, professor, aluno de mestrado, desenvolvedor móvel, entusiasta de comunidades, único brasileiro reconhecido como Microsoft e Xamarin MVP, Xamarin Certified Mobile Developer, Co-Fundador e Host Monkey Nights Dev e Organizador da Open Dev Community",
             AvatarUrl = "https://avatars2.githubusercontent.com/u/374777?s=460&v=4"
         };
+        private Speaker angelo = new Speaker
+        {
+            Name = "Angelo Belchior",
+            Title = "Microsoft MVP",
+            MiniBio = "Desenvolvedor há 15 anos, participou de projetos Desktop, Web e agora Mobile utilizando Xamarin. É Microsoft MVP em Visual Studio e Tecnologias, MCPD em Web e Lead Software Developer na ESX",
+            AvatarUrl = "https://avatars3.githubusercontent.com/u/4245518?s=460&v=4"
+        };
 
 		public async Task<List<Talk>> GetSchedule()
 		{
@@ -71,6 +78,13 @@ namespace Evntr.Core.Services
                     Description= "Crie aplicativos utilizando binding e MVVM para facilitar a escrita e aumentar a testabilidade de apps Xamarin.Forms",
                     ScheduleDay = ScheduleDay.One,
                     Speaker = william
+                },
+                new Talk
+                {
+                    Title = "MVVM com Prism",
+                    Description = "Deixe o Prism trabalhar por você! Simples, prático e rápido. Depois que você usa uma vez, nunca mais começará um projeto sem ele!",
+                    ScheduleDay = ScheduleDay.One,
+                    Speaker = angelo
                 }
             };
 		}
@@ -88,7 +102,7 @@ namespace Evntr.Core.Services
                 FullAddress = "Av. das Nações Unidas, 12901 - Brooklin Novo, São Paulo - SP, 04578-910",
                 Speakers = new List<Speaker>
                 {
-                    mahmoud, letticia, william
+                    mahmoud, letticia, william, angelo
                 }
             };
 		}
