@@ -75,9 +75,9 @@ namespace Evntr.Core.Controls
             speakerView.miniBio.TextColor = newColor;
         }
 
-        public string TextColor
+        public Color TextColor
         {
-            get => (string)GetValue(TextColorProperty);
+            get => (Color)GetValue(TextColorProperty);
             set => SetValue(TextColorProperty, value);
         }
     }
