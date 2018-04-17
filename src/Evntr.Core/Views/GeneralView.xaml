@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Evntr.Core.Controls"
     x:Class="Evntr.Core.Views.GeneralView">
     <StackLayout BackgroundColor="#352584"
                  Spacing="0">
@@ -29,18 +30,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal"
-                                     Padding="10">
-                            <Image Source="{Binding AvatarUrl}"
-                                   HeightRequest="100"
-                                   Aspect="AspectFit"/>
-                            <StackLayout VerticalOptions="EndAndExpand">
-                                <Label Text="{Binding Name}"
-                                       FontAttributes="Bold"/>
-                                <Label Text="{Binding MiniBio}"
-                                       FontSize="14"/>    
-                            </StackLayout>
-                        </StackLayout>
+                        <local:SpeakerView Name="{Binding Name}"
+                                           AvatarUrl="{Binding AvatarUrl}"
+                                           MiniBio="{Binding MiniBio}"/>
                     </ViewCell>
                 </DataTemplate>            
             </ListView.ItemTemplate>
