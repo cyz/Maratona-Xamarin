@@ -4,7 +4,10 @@
                  Padding="10">
         <Image x:Name="avatar"
                HeightRequest="100"
-               Aspect="AspectFit"/>
+               WidthRequest="100"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
         <StackLayout VerticalOptions="EndAndExpand">
             <Label x:Name="name"
                    FontAttributes="Bold"/>
