@@ -3,7 +3,15 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Evntr.Core.Views.AboutView">
-    <ContentPage.Content>
-        <Label Text="About" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-    </ContentPage.Content>
+    <AbsoluteLayout Padding="0, 20, 0, 0" BackgroundColor="#352584">
+        <StackLayout Padding="10"
+                     BackgroundColor="#EFEFEF"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <Label Text="Envie seu feedback sobre o evento" />
+            <Editor HeightRequest="150"/>
+
+            <Button Text="Enviar" />
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>
