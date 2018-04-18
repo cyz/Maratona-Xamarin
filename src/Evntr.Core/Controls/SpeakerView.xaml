@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Evntr.Core.Controls.SpeakerView">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Evntr.Core.Controls.SpeakerView"
+             xmlns:local="clr-namespace:Evntr.Core.Controls">
     <StackLayout Orientation="Horizontal"
                  Padding="10">
-        <Image x:Name="avatar"
+        <local:CircleImage x:Name="avatar"
                HeightRequest="100"
                WidthRequest="100"
                Aspect="AspectFit"
