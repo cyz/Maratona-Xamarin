@@ -133,21 +133,21 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_about_black.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_general_black.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_schedule_black.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_about_black.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_general_black.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_schedule_black.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_about_black.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_general_black.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_schedule_black.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_about_black.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_general_black.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_schedule_black.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_about_black.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_general_black.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_schedule_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_general.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_general.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_general.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_general.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_about.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_general.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_schedule.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

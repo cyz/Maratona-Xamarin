@@ -2232,7 +2232,7 @@ namespace Evntr.Droid
 			public const int design_snackbar_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_about_black = 2130837595;
+			public const int ic_about = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
 			public const int ic_audiotrack_dark = 2130837596;
@@ -2247,7 +2247,7 @@ namespace Evntr.Droid
 			public const int ic_dialog_close_light = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_general_black = 2130837600;
+			public const int ic_general = 2130837600;
 			
 			// aapt resource value: 0x7f020061
 			public const int ic_group_collapse_00 = 2130837601;
@@ -2655,7 +2655,7 @@ namespace Evntr.Droid
 			public const int ic_mr_button_grey = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_schedule_black = 2130837736;
+			public const int ic_schedule = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
 			public const int ic_vol_type_speaker_dark = 2130837737;

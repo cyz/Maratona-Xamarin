@@ -6,7 +6,7 @@
     x:Class="Evntr.Core.Views.MainView"
     NavigationPage.HasNavigationBar="False"
     NavigationPage.BackButtonTitle="">
-    <views:GeneralView  BindingContext="{Binding GeneralViewModel}" Icon="ic_general_black.png" />
-    <views:ScheduleView  BindingContext="{Binding ScheduleViewModel}" Icon="ic_schedule_black.png"/>
-    <views:AboutView  BindingContext="{Binding AboutViewModel}" Icon="ic_about_black.png" />
+    <views:GeneralView  BindingContext="{Binding GeneralViewModel}" Icon="ic_general.png" />
+    <views:ScheduleView  BindingContext="{Binding ScheduleViewModel}" Icon="ic_schedule.png"/>
+    <views:AboutView  BindingContext="{Binding AboutViewModel}" Icon="ic_about.png" />
 </TabbedPage>

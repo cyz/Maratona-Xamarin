@@ -17,14 +17,14 @@
         <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
         <!-- colorPrimary is used for the default action bar background -->
         <item
-            name="colorPrimary">#2196F3</item>
+            name="colorPrimary">#30286F</item>
         <!-- colorPrimaryDark is used for the status bar -->
         <item
-            name="colorPrimaryDark">#1976D2</item>
+            name="colorPrimaryDark">#2a2361</item>
         <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
         <item
-            name="colorAccent">#FF4081</item>
+            name="colorAccent">#ED3941</item>
         <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
         <item
@@ -36,6 +36,6 @@
         name="AppCompatDialogStyle"
         parent="Theme.AppCompat.Light.Dialog">
         <item
-            name="colorAccent">#FF4081</item>
+            name="colorAccent">#ED3941</item>
     </style>
 </resources>
