@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Evntr.Core.Controls"
     x:Class="Evntr.Core.Views.AboutView">
     <AbsoluteLayout Padding="0, 20, 0, 0" BackgroundColor="#352584">
         <StackLayout Padding="10"
@@ -10,6 +11,30 @@
                      AbsoluteLayout.LayoutBounds="0,0,1,1">
             <Label Text="Envie seu feedback sobre o evento" />
             <Editor HeightRequest="150"/>
+            <StackLayout Orientation="Horizontal">
+                <local:Checkbox VerticalOptions="Center"
+                                HorizontalOptions="Start">
+                    <local:Checkbox.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android"
+                                Value="25" />
+                            <On Platform="iOS"
+                                Value="20"/>
+                        </OnPlatform>
+                    </local:Checkbox.HeightRequest>
+                    <local:Checkbox.WidthRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android"
+                                Value="25" />
+                            <On Platform="iOS"
+                                Value="20"/>
+                        </OnPlatform>
+                    </local:Checkbox.WidthRequest>
+                </local:Checkbox>
+                <Label Text="Desejo receber notícias sobre o próximo evento"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
 
             <Button Text="Enviar" />
         </StackLayout>
