@@ -3,15 +3,34 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Evntr.Core.Views.AboutView">
-    <AbsoluteLayout Padding="0, 20, 0, 0" BackgroundColor="#352584">
+    <AbsoluteLayout BackgroundColor="#ED3941">
+        <Label Text="Feedback"
+               BackgroundColor="#ED3941"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold" 
+               Margin="0,20,0,0"
+               AbsoluteLayout.LayoutFlags="All" 
+               AbsoluteLayout.LayoutBounds="1,0,1,.1"/>
         <StackLayout Padding="10"
                      BackgroundColor="#EFEFEF"
                      AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1">
-            <Label Text="Envie seu feedback sobre o evento" />
+                     AbsoluteLayout.LayoutBounds="1,1,1,.9" >
+
+            <Label Text="Nome" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
+            <Entry Placeholder="Nome" PlaceholderColor="#352584" FontSize="12"/>
+            
+            <Label Text="E-mail" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
+            <Entry Placeholder="E-mail" PlaceholderColor="#352584" FontSize="12"/>
+            
+            <Label Text="Telefone" TextColor="#352584" FontAttributes="Bold" Margin="0,2" />
+            <Entry Placeholder="Telefone" PlaceholderColor="#352584" FontSize="12"/>
+            
+            <Label Text="Envie seu feedback sobre o evento" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
             <Editor HeightRequest="150"/>
 
-            <Button Text="Enviar" />
+            <Button Text="Enviar" FontAttributes="Bold" />
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>
