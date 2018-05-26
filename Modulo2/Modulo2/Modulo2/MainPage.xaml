@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Modulo2"
+             x:Class="Modulo2.MainPage">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:IntToBoolConverter x:Key="intToBoolConverter" />
+            <local:StatusToImageConverter x:Key="statusToImageConverter" />
+
+            <Style TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry"
+                         Property="IsFocused"
+                         Value="True">
+                        <Setter Property="BackgroundColor" Value="Green" />
+                    </Trigger>
+                    <Trigger TargetType="Entry"
+                         Property="IsFocused"
+                         Value="False">
+                        <Setter Property="BackgroundColor" Value="Blue" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10, 0">
+
+        <Entry x:Name="txtBusca"
+               Text=""
+               Placeholder="Digite seu texto para Busca"
+               VerticalOptions="CenterAndExpand">
+
+            <!--<Entry.Effects>
+                <local:EntryFocusEffect />
+            </Entry.Effects>-->
+
+            <Entry.Behaviors>
+                <local:EntryColorBehavior />
+            </Entry.Behaviors>
+
+        </Entry>
+
+        <Button Text="Buscar"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                IsEnabled="{Binding Source={x:Reference txtBusca},
+                                    Path=Text.Length,
+                                    Converter={StaticResource intToBoolConverter}}"
+                />
+
+        <Button Text="Buscar 2"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand">
+
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" 
+                             Binding="{Binding Source={x:Reference txtBusca},
+                                               Path=Text.Length}"
+                             Value="0">
+
+                    <Setter Property="IsEnabled" Value="False" />
+
+                </DataTrigger>
+
+                <DataTrigger TargetType="Button" 
+                             Binding="{Binding Source={x:Reference txtBusca},
+                                               Path=Text.Length}"
+                             Value="3">
+
+                    <Setter Property="BackgroundColor" Value="Red" />
+
+                </DataTrigger>
+            </Button.Triggers>
+
+        </Button>
+
+        <Entry x:Name="txtUsuario" Text="" />
+        <Entry x:Name="txtSenha" Text="" IsPassword="True" />
+        <Button Text="Efetuar Login" HorizontalOptions="Center" IsEnabled="False">
+            <Button.Triggers>
+                <MultiTrigger TargetType="Button">
+                    <MultiTrigger.Conditions>
+
+                        <BindingCondition Binding="{Binding Source={x:Reference txtUsuario},
+                                                            Path=Text.Length,
+                                                            Converter={StaticResource intToBoolConverter}}" 
+                                          Value="True"                  
+                        />
+
+                        <BindingCondition Binding="{Binding Source={x:Reference txtSenha},
+                                                            Path=Text.Length,
+                                                            Converter={StaticResource intToBoolConverter}}" 
+                                          Value="True"                  
+                        />
+
+                    </MultiTrigger.Conditions>
+
+                    <Setter Property="IsEnabled" Value="True" />
+                </MultiTrigger>
+            </Button.Triggers>
+        </Button>
+
+
+        <ListView x:Name="list">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" HorizontalOptions="Start" />
+                            <Image Source="{Binding Status, Converter={StaticResource statusToImageConverter}}" 
+                                   HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.Triggers>
+                <EventTrigger Event="ItemTapped">
+                    <local:ItemTappedEventTrigger />
+                </EventTrigger>
+            </ListView.Triggers>
+
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
