@@ -3,13 +3,39 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Evntr.Core.Views.AboutView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="View" x:Key="baseStyle">
+                <Setter Property="BackgroundColor" Value="#F1F1F1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="0,2"/>
+            </Style>
+       
+          <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#352584"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+           </Style>
+            
+          <Style TargetType="Entry" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontSize" Value="12"/>
+           </Style>
+
+           <Style TargetType="Button" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#ED3941"/>
+                <Setter Property="BorderColor" Value="#352584"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+           </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <AbsoluteLayout BackgroundColor="#ED3941">
         <Label Text="Feedback"
                BackgroundColor="#ED3941"
                TextColor="White"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"
-               FontAttributes="Bold" 
                Margin="0,20,0,0"
                AbsoluteLayout.LayoutFlags="All" 
                AbsoluteLayout.LayoutBounds="1,0,1,.1"/>
@@ -18,19 +44,21 @@
                      AbsoluteLayout.LayoutFlags="All"
                      AbsoluteLayout.LayoutBounds="1,1,1,.9" >
 
-            <Label Text="Nome" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
-            <Entry Placeholder="Nome" PlaceholderColor="#352584" FontSize="12"/>
+            <Label Text="Nome" />
+            <Entry Placeholder="Nome"/>
             
-            <Label Text="E-mail" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
-            <Entry Placeholder="E-mail" PlaceholderColor="#352584" FontSize="12"/>
+            <Label Text="E-mail" />
+            <Entry Placeholder="E-mail"/>
             
-            <Label Text="Telefone" TextColor="#352584" FontAttributes="Bold" Margin="0,2" />
-            <Entry Placeholder="Telefone" PlaceholderColor="#352584" FontSize="12"/>
+            <Label Text="Telefone" />
+            <Entry Placeholder="Telefone"/>
             
-            <Label Text="Envie seu feedback sobre o evento" TextColor="#352584" FontAttributes="Bold" Margin="0,2"/>
-            <Editor HeightRequest="150"/>
+            <Label Text="Envie seu feedback sobre o evento" />
+            <Editor HeightRequest="150" BackgroundColor="#e3e9f2"/>
 
-            <Button Text="Enviar" FontAttributes="Bold" />
+            <Button Text="Enviar" />
+            <Button Text="Cancelar" />
+            
         </StackLayout>
     </AbsoluteLayout>
 </ContentPage>

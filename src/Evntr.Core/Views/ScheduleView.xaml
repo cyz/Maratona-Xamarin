@@ -7,9 +7,9 @@
     <StackLayout BackgroundColor="#ED3941"
                  Spacing="0"
                  Padding="0, 20, 0, 0">
-        <Label Text="Agenda Dia 1"
+        <Label Text="Agenda Dia 1" Style="{DynamicResource TitleStyle}"
                BackgroundColor="#ED3941"
-               TextColor="White"
+               TextColor="White" 
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"
                FontAttributes="Bold"
@@ -21,10 +21,10 @@
             HasUnevenRows="True"
             x:Name="listViewTalks">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate>  
                     <ViewCell>
                         <StackLayout Padding="10">
-                            <Label Text="{Binding Title}"
+                            <Label Text="{Binding Title}" 
                                    FontAttributes="Bold"/>
                             <Label Text="{Binding Speaker.Name}"
                                    FontSize="14"/>

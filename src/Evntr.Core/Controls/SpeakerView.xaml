@@ -10,7 +10,7 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
         <StackLayout VerticalOptions="EndAndExpand">
-            <Label x:Name="name"
+            <Label x:Name="name" 
                    FontAttributes="Bold"/>
             <Label x:Name="miniBio"
                    FontSize="14"/>    
