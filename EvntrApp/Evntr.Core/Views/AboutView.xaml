@@ -4,39 +4,62 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Evntr.Core.Controls"
     x:Class="Evntr.Core.Views.AboutView">
-    <AbsoluteLayout Padding="0, 20, 0, 0" BackgroundColor="#352584">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="View" x:Key="baseStyle">
+                <Setter Property="BackgroundColor" Value="#F1F1F1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="0,2"/>
+            </Style>
+       
+          <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#352584"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+           </Style>
+            
+          <Style TargetType="Entry" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontSize" Value="12"/>
+           </Style>
+
+           <Style TargetType="Button" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="TextColor" Value="#ED3941"/>
+                <Setter Property="BorderColor" Value="#352584"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+           </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <AbsoluteLayout BackgroundColor="#ED3941">
+        <Label Text="Feedback"
+               BackgroundColor="#ED3941"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Margin="0,20,0,0"
+               AbsoluteLayout.LayoutFlags="All" 
+               AbsoluteLayout.LayoutBounds="1,0,1,.1"/>
         <StackLayout Padding="10"
                      BackgroundColor="#EFEFEF"
                      AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1">
+                     AbsoluteLayout.LayoutBounds="1,1,1,.9" >
+
+            <Label Text="Nome" />
+            <Entry Placeholder="Nome"/>
+            
+            <Label Text="E-mail" />
+            <Entry Placeholder="E-mail"/>
+            
+            <Label Text="Telefone" />
+            <Entry Placeholder="Telefone"/>
+            
             <Label Text="Envie seu feedback sobre o evento" />
-            <Editor HeightRequest="150"/>
-            <StackLayout Orientation="Horizontal">
-                <local:Checkbox VerticalOptions="Center"
-                                HorizontalOptions="Start">
-                    <local:Checkbox.HeightRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android"
-                                Value="25" />
-                            <On Platform="iOS"
-                                Value="20"/>
-                        </OnPlatform>
-                    </local:Checkbox.HeightRequest>
-                    <local:Checkbox.WidthRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android"
-                                Value="25" />
-                            <On Platform="iOS"
-                                Value="20"/>
-                        </OnPlatform>
-                    </local:Checkbox.WidthRequest>
-                </local:Checkbox>
-                <Label Text="Desejo receber notícias sobre o próximo evento"
-                       VerticalTextAlignment="Center"
-                       LineBreakMode="WordWrap"/>
-            </StackLayout>
+            <Editor HeightRequest="150" BackgroundColor="#e3e9f2"/>
 
             <Button Text="Enviar" />
+            <Button Text="Cancelar" />
+            
         </StackLayout>
-    </AbsoluteLayout>
+    </AbsoluteLayout>    
 </ContentPage>
