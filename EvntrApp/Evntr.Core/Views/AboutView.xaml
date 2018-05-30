@@ -16,6 +16,7 @@
           <Style TargetType="Label">
                 <Setter Property="TextColor" Value="#352584"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="14"/>
            </Style>
             
           <Style TargetType="Entry" BasedOn="{StaticResource baseStyle}">
@@ -35,6 +36,7 @@
         <Label Text="Feedback"
                BackgroundColor="#ED3941"
                TextColor="White"
+               FontSize="16"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"
                Margin="0,20,0,0"
@@ -57,6 +59,31 @@
             <Label Text="Envie seu feedback sobre o evento" />
             <Editor HeightRequest="150" BackgroundColor="#e3e9f2"/>
 
+            <StackLayout Orientation="Horizontal">
+                <local:Checkbox VerticalOptions="Center"
+                                HorizontalOptions="Start">
+                    <local:Checkbox.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android"
+                                Value="25" />
+                            <On Platform="iOS"
+                                Value="20"/>
+                        </OnPlatform>
+                    </local:Checkbox.HeightRequest>
+                    <local:Checkbox.WidthRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android"
+                                Value="25" />
+                            <On Platform="iOS"
+                                Value="20"/>
+                        </OnPlatform>
+                    </local:Checkbox.WidthRequest>
+                </local:Checkbox>
+                <Label Text="Desejo receber notícias sobre o próximo evento"
+                       VerticalTextAlignment="Center" 
+                       LineBreakMode="WordWrap"/>
+            </StackLayout>
+            
             <Button Text="Enviar" />
             <Button Text="Cancelar" />
             
