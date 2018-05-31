@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App_Themes"
+             x:Class="App_Themes.MainPage">
+
+  <StackLayout Padding="20">
+    <Button Text="Button Class Default" />
+    <Button Text="Button Class Primary" StyleClass="Primary"/>
+    <Button Text="Button Class Success" StyleClass="Success" />
+    <Button Text="Button Class Warning" StyleClass="Warning" />
+    <Button Text="Button Class Danger" StyleClass="Danger" />
+
+    <BoxView BackgroundColor="Yellow" WidthRequest="50" Margin="15" StyleClass="HorizontalRule"/>
+        
+    <Image Source="dog.jpg" Aspect="AspectFill" HorizontalOptions="Center" StyleClass="Circle" />
+ 
+  </StackLayout>
+  
+</ContentPage>
