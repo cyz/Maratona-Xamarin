@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Modulo5"
+             x:Class="Modulo5.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="PlatformNameLabel"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Entry></Entry>
+        <Button Text="Pan" x:Name="PanButton" Clicked="PanButton_Clicked"></Button>
+        <Button Text="Resize" x:Name="ResizeButton" Clicked="ResizeButton_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>
