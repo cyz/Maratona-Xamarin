@@ -150,6 +150,11 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_about.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_general.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_schedule.png" />
+    <AndroidResource Include="Resources\drawable\xamarinsummit.png" />
+    <AndroidResource Include="Resources\drawable\angelo.png" />
+    <AndroidResource Include="Resources\drawable\william.jpeg" />
+    <AndroidResource Include="Resources\drawable\letticia.jpeg" />
+    <AndroidResource Include="Resources\drawable\mahmoud.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
