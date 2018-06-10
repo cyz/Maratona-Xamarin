@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<linker>
+        <assembly fullname="Evntr.Core">
+                <type fullname="Evntr.Core.*" />
+        </assembly>
+        <assembly fullname="Evntr.Models">
+                <type fullname="Evntr.Models.*" />
+        </assembly>
+</linker>
